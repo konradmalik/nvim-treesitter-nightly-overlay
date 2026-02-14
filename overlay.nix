@@ -109,7 +109,7 @@ in
           nvimSkipModules = [ "nvim-treesitter._meta.parsers" ];
         })
       );
-      nvim-treesitter = nvim-treesitter-unwrapped;
+      nvim-treesitter = lib.warn "The nvim-treesitter-main flake is deprecated; consider moving to the nvim-treesitter package provided by nixpkgs unstable." nvim-treesitter-unwrapped;
 
       nvim-treesitter-textobjects = prev'.nvim-treesitter-textobjects.overrideAttrs (old: {
         version = inputs.nvim-treesitter-textobjects.rev;

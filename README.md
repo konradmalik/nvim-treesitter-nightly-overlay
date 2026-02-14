@@ -22,6 +22,11 @@ The `nixpkgs` `nvim-treesitter` plugin is not well equipped to handle the migrat
 
 **nvim-treesitter-main** is a flake that builds the new `main` branch `nvim-treesitter`, along with all of the parser versions from the [`parsers.lua`](https://github.com/nvim-treesitter/nvim-treesitter/blob/main/lua/nvim-treesitter/parsers.lua) file, as recommended by the project.
 
+## Deprecation
+The `nvim-treesitter` main branch was merged into [nixpkgs](https://github.com/NixOS/nixpkgs/pull/470883) in late 2025.
+
+This flake will stay maintained (new grammar versions) in the medium-term, but you should look to move to the nixpkgs version - it's far simpler and more correct.
+
 ## Usage
 
 ** See below if you also plan to install tree-sitter grammars **
