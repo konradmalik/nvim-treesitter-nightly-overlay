@@ -16,6 +16,7 @@ jobs:
       - run: nix flake update
       - run: nix develop --command "generate-parsers"
       - uses: peter-evans/create-pull-request@v8
+        id: cpr
         with:
           token: ${{ secrets.PAT }}
           branch: ci/update
@@ -23,3 +24,7 @@ jobs:
           title: "chore: update flake inputs + generated.nix"
           body: "This PR is auto-generated."
           assignees: konradmalik
+      - if: steps.cpr.outputs.pull-request-operation == 'created'
+        run: gh pr merge --auto --rebase "${{ steps.cpr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
