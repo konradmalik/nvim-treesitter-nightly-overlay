@@ -22,3 +22,4 @@ jobs:
           commit-message: "chore: update flake inputs + generated.nix"
           title: "chore: update flake inputs + generated.nix"
           body: "This PR is auto-generated."
+          assignees: konradmalik
