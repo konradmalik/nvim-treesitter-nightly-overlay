@@ -92,7 +92,7 @@ let
 in
 {
   vimPlugins = prev.vimPlugins.extend (
-    final': prev': {
+    final': prev': rec {
       nvim-treesitter-unwrapped = (
         prev'.nvim-treesitter.overrideAttrs (old: rec {
           src = inputs.nvim-treesitter;
@@ -113,6 +113,8 @@ in
           nvimSkipModules = [ "nvim-treesitter._meta.parsers" ];
         })
       );
+
+      nvim-treesitter = nvim-treesitter-unwrapped;
     }
   );
 
