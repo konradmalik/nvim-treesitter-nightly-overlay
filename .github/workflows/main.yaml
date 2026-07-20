@@ -4,17 +4,14 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/flakehub-cache-action@main
-      - uses: cachix/cachix-action@master
-        if: github.ref == 'refs/heads/master'
+      - uses: wimpysworld/nothing-but-nix@v10
+      - uses: DeterminateSystems/nix-installer-action@v22
         with:
-          name: nvim-treesitter-main
-          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-
+          extra-conf: |
+            accept-flake-config = true
       - run: nix flake check
       - run: nix run nixpkgs#nixfmt **/*.nix
 

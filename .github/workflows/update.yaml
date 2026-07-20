@@ -6,14 +6,13 @@ on:
     - cron: "0 3 * * 0"
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/flakehub-cache-action@main
+      - uses: DeterminateSystems/nix-installer-action@v22
       - run: nix flake update
       - run: nix develop --command "generate-parsers"
       - uses: peter-evans/create-pull-request@v7

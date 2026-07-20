@@ -69,26 +69,30 @@ let
       };
     in
     final.vimPlugins.nvim-treesitter-unwrapped.overrideAttrs (old: {
-      postInstall = old.postInstall + ''
-        # ensure runtime queries get linked to RTP (:TSInstall does this too)
-        mkdir -p $out/queries
-        for grammar in ${runtimeQueries}; do
-            ln -sfT $src/runtime/queries/$grammar $out/queries/$grammar
-        done
+      postInstall =
+        old.postInstall
+        +
+        # bash
+        ''
+          # ensure runtime queries get linked to RTP (:TSInstall does this too)
+          mkdir -p $out/queries
+          for grammar in ${runtimeQueries}; do
+              ln -sfT $src/runtime/queries/$grammar $out/queries/$grammar
+          done
 
-        # patch nvim-treesitter with parser bundle path
-        ln -sfT ${bundle}/parser $out/parser
-        substituteInPlace $out/lua/nvim-treesitter/config.lua \
-          --replace-fail "install_dir = vim.fs.joinpath(vim.fn.stdpath('data') --[[@as string]], 'site')," \
-          "install_dir = '$out'"
-      '';
+          # patch nvim-treesitter with parser bundle path
+          ln -sfT ${bundle}/parser $out/parser
+          substituteInPlace $out/lua/nvim-treesitter/config.lua \
+            --replace-fail "install_dir = vim.fs.joinpath(vim.fn.stdpath('data') --[[@as string]], 'site')," \
+            "install_dir = '$out'"
+        '';
     });
 
   withAllGrammars = withPlugins (_: allGrammars);
 in
 {
   vimPlugins = prev.vimPlugins.extend (
-    final': prev': rec {
+    final': prev': {
       nvim-treesitter-unwrapped = (
         prev'.nvim-treesitter.overrideAttrs (old: rec {
           src = inputs.nvim-treesitter;
@@ -109,13 +113,6 @@ in
           nvimSkipModules = [ "nvim-treesitter._meta.parsers" ];
         })
       );
-      nvim-treesitter = lib.warn "The nvim-treesitter-main flake is deprecated; consider moving to the nvim-treesitter package provided by nixpkgs unstable." nvim-treesitter-unwrapped;
-
-      nvim-treesitter-textobjects = prev'.nvim-treesitter-textobjects.overrideAttrs (old: {
-        version = inputs.nvim-treesitter-textobjects.rev;
-        src = inputs.nvim-treesitter-textobjects;
-        dependencies = [ final'.nvim-treesitter ];
-      });
     }
   );
 
