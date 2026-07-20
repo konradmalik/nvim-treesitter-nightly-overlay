@@ -68,7 +68,9 @@ overlays = [
 ];
 ```
 
-If you need the unpatched `nvim-treesitter` plugin without any parsers/queries bundled, even after you overlay it, you can use the `nvim-treesitter-unwrapped` output of this overlay.
+If you need the `nvim-treesitter` plugin without any parsers/queries bundled, use the `nvim-treesitter` output directly (i.e. without calling `.withAllGrammars`/`.withPlugins`) — the bundling only happens when you call those functions.
+
+Because parsers live in the read-only nix store, the commands that would install/update/remove them at runtime (`:TSInstall`, `:TSInstallFromGrammar`, `:TSUpdate`, `:TSUninstall`) are removed. `:TSLog` is kept.
 
 ## Updating
 

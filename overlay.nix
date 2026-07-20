@@ -68,7 +68,7 @@ let
         paths = map grammarToPlugin finalGrammars;
       };
     in
-    final.vimPlugins.nvim-treesitter-unwrapped.overrideAttrs (old: {
+    final.vimPlugins.nvim-treesitter.overrideAttrs (old: {
       postInstall =
         old.postInstall
         +
@@ -92,13 +92,22 @@ let
 in
 {
   vimPlugins = prev.vimPlugins.extend (
-    final': prev': rec {
-      nvim-treesitter-unwrapped = (
+    final': prev': {
+      nvim-treesitter = (
         prev'.nvim-treesitter.overrideAttrs (old: rec {
           src = inputs.nvim-treesitter;
           name = "${old.pname}-${src.rev}";
-          postPatch = "";
-          # ensure runtime queries get linked to RTP (:TSInstall does this too)
+          # TSInstall/TSInstallFromGrammar/TSUpdate/TSUninstall mutate the parser
+          # install dir, which is read-only under Nix, so remove them (TSLog is
+          # harmless and kept). Fail the build if upstream stops defining any of
+          # them, so this patch can't silently rot.
+          postPatch = ''
+            for cmd in TSInstall TSInstallFromGrammar TSUpdate TSUninstall; do
+              grep -q "nvim_create_user_command('$cmd'" plugin/nvim-treesitter.lua \
+                || { echo "overlay.nix: upstream no longer defines $cmd, review the removal patch"; exit 1; }
+              printf '\nvim.api.nvim_del_user_command("%s")\n' "$cmd" >> plugin/nvim-treesitter.lua
+            done
+          '';
           passthru = (prev'.nvim-treesitter.passthru or { }) // {
             inherit
               builtGrammars
@@ -120,8 +129,6 @@ in
           nvimSkipModules = [ "nvim-treesitter._meta.parsers" ];
         })
       );
-
-      nvim-treesitter = nvim-treesitter-unwrapped;
     }
   );
 

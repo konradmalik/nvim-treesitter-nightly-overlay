@@ -56,7 +56,6 @@
           };
         in
         rec {
-          nvim-treesitter-unwrapped = pkgs'.vimPlugins.nvim-treesitter-unwrapped;
           nvim-treesitter = pkgs'.vimPlugins.nvim-treesitter;
           default = nvim-treesitter;
         }
