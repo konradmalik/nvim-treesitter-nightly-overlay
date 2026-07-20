@@ -16,6 +16,7 @@ jobs:
         with:
           extra-conf: |
             accept-flake-config = true
+      - uses: DeterminateSystems/magic-nix-cache-action@v14
       - run: nix flake check
       - run: nix run nixpkgs#nixfmt **/*.nix
 
