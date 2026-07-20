@@ -12,6 +12,10 @@
       alt="Stars"
       src="https://img.shields.io/github/stars/konradmalik/nvim-treesitter-nightly-overlay?style=for-the-badge&logo=starship&color=c69ff5&logoColor=D9E0EE&labelColor=302D41"
     />
+    <img
+      alt="Build"
+      src="https://img.shields.io/github/actions/workflow/status/konradmalik/nvim-treesitter-nightly-overlay/main.yaml?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"
+    />
   </div>
 </div>
 
@@ -21,7 +25,7 @@
 
 ## Usage
 
-** See below if you also plan to install tree-sitter grammars **
+**See below if you also plan to install tree-sitter grammars**
 
 In your flake.nix:
 
