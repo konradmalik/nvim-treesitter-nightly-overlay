@@ -3,7 +3,7 @@ name: update treesitter grammars
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * 0"
+    - cron: "0 3 * * *"
 jobs:
   update:
     runs-on: ubuntu-26.04
