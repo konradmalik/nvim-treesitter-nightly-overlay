@@ -21,7 +21,7 @@
 
 ## Overview
 
-**nvim-treesitter-nightly-overlay** is a flake that builds the up-to-date `main` branch `nvim-treesitter`, along with all of the parser versions from the [`parsers.lua`](https://github.com/nvim-treesitter/nvim-treesitter/blob/main/lua/nvim-treesitter/parsers.lua) file, as recommended by the project.
+**nvim-treesitter-nightly-overlay** is a flake that builds the up-to-date [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter), along with all of the parser versions from the [`parsers.lua`](https://github.com/nvim-treesitter/nvim-treesitter/blob/main/lua/nvim-treesitter/parsers.lua) file, as recommended by the project.
 
 ## Usage
 
