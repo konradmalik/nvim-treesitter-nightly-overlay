@@ -577,12 +577,12 @@
   diff = buildGrammar {
     passthru.name = "diff";
     language = "diff";
-    version = "0.0.0+rev=7d20331b97a008daf2dd0055da8c609f03424105";
+    version = "0.0.0+rev=e7e845fc380e8677f9b770dc96d6b7e029daab55";
     src = fetchFromGitHub {
       owner = "tree-sitter-grammars";
       repo = "tree-sitter-diff";
-      rev = "7d20331b97a008daf2dd0055da8c609f03424105";
-      hash = "sha256-l9KwHqEdwqN5CYZQVCEymhld/m+MArAzqfPz8mV7M8Q=";
+      rev = "e7e845fc380e8677f9b770dc96d6b7e029daab55";
+      hash = "sha256-IgxX5RqnsPu2Sub5gSY85Gv2Z3h3jXUDundFfhMKGpE=";
     };
     meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-diff";
   };
@@ -1136,12 +1136,12 @@
   gnuplot = buildGrammar {
     passthru.name = "gnuplot";
     language = "gnuplot";
-    version = "0.0.0+rev=20a98295a52caa5f474839838a800d250e8fe1f4";
+    version = "0.0.0+rev=c26c387b7c0db7c21a7114757735b865503b62c9";
     src = fetchFromGitHub {
       owner = "dpezto";
       repo = "tree-sitter-gnuplot";
-      rev = "20a98295a52caa5f474839838a800d250e8fe1f4";
-      hash = "sha256-UHgeM0pQm9DQwZdPByzJvYY4DbzcxE0WDDuqVGcsxts=";
+      rev = "c26c387b7c0db7c21a7114757735b865503b62c9";
+      hash = "sha256-X8qK3jluHEns/nLpdwKyWNfM12vgkAr10r+DH+1mLb4=";
     };
     meta.homepage = "https://github.com/dpezto/tree-sitter-gnuplot";
   };
