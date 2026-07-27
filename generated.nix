@@ -1136,11 +1136,11 @@
   gnuplot = buildGrammar {
     passthru.name = "gnuplot";
     language = "gnuplot";
-    version = "0.0.0+rev=a2dff01d8bdbdd618ee9169cc85899c401a72aa6";
+    version = "0.0.0+rev=v3.0.0";
     src = fetchFromGitHub {
       owner = "dpezto";
       repo = "tree-sitter-gnuplot";
-      rev = "a2dff01d8bdbdd618ee9169cc85899c401a72aa6";
+      tag = "v3.0.0";
       hash = "sha256-S+PMvugIpwoppfeufk1typ6m9Wfs8sw1EJIX47ZC8qQ=";
     };
     meta.homepage = "https://github.com/dpezto/tree-sitter-gnuplot";
