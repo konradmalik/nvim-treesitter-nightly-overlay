@@ -2908,12 +2908,12 @@
   scala = buildGrammar {
     passthru.name = "scala";
     language = "scala";
-    version = "0.0.0+rev=5877eb9f55dc396da0d9a3e890df01f5c4810233";
+    version = "0.0.0+rev=bf9ac14f8b95c8ea341d830165de5a66e0f6664b";
     src = fetchFromGitHub {
       owner = "tree-sitter";
       repo = "tree-sitter-scala";
-      rev = "5877eb9f55dc396da0d9a3e890df01f5c4810233";
-      hash = "sha256-rfdfvPeSxNThv4COPehfTQtP5ER54NdJYwlNI94EdiA=";
+      rev = "bf9ac14f8b95c8ea341d830165de5a66e0f6664b";
+      hash = "sha256-TQFwnl8qGY9WD7a9jSSAZYrNa5KfAKQRqbKHzeJAfvw=";
     };
     meta.homepage = "https://github.com/tree-sitter/tree-sitter-scala";
   };
