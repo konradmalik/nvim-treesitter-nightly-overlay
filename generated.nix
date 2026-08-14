@@ -577,12 +577,12 @@
   diff = buildGrammar {
     passthru.name = "diff";
     language = "diff";
-    version = "0.0.0+rev=0f8fe525b2ff5fbd7f21d0dcfb756fbbe30ca844";
+    version = "0.0.0+rev=0400db1417a28145bec93001f1ee1411155a7363";
     src = fetchFromGitHub {
       owner = "tree-sitter-grammars";
       repo = "tree-sitter-diff";
-      rev = "0f8fe525b2ff5fbd7f21d0dcfb756fbbe30ca844";
-      hash = "sha256-tdwWYn+DhU060bNiXn0Dl/E2pd2qgJDI1/+nlZtAv0I=";
+      rev = "0400db1417a28145bec93001f1ee1411155a7363";
+      hash = "sha256-hsH2RmQYFnvBuqfoBO7gCym9CUmT1qfgDpOlZ+iqRks=";
     };
     meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-diff";
   };
@@ -3359,12 +3359,12 @@
   teal = buildGrammar {
     passthru.name = "teal";
     language = "teal";
-    version = "0.0.0+rev=05d276e737055e6f77a21335b7573c9d3c091e2f";
+    version = "0.0.0+rev=ac6b42ffb23d5d52b582c02508dd3524ac0ba3df";
     src = fetchFromGitHub {
       owner = "euclidianAce";
       repo = "tree-sitter-teal";
-      rev = "05d276e737055e6f77a21335b7573c9d3c091e2f";
-      hash = "sha256-JDqWr895Ob1Jn3Kf44xbkMJqyna0AiMBU5xJpA6ZP7w=";
+      rev = "ac6b42ffb23d5d52b582c02508dd3524ac0ba3df";
+      hash = "sha256-8vOZaboWyH52oS0ztBcgWXZl89ZFoH5W2u/cTvjOtpU=";
     };
     meta.homepage = "https://github.com/euclidianAce/tree-sitter-teal";
     generate = true;
