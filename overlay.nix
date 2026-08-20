@@ -63,7 +63,7 @@ let
 
       runtimeQueries = lib.concatStringsSep " " ((map (g: g.passthru.name) grammars) ++ required);
 
-      bundle = pkgs.symlinkJoin {
+      bundle = final.symlinkJoin {
         name = "nvim-treesitter-bundle";
         paths = map grammarToPlugin finalGrammars;
       };
@@ -120,7 +120,7 @@ in
             grammarPlugins = lib.mapAttrs (_: grammarToPlugin) generatedDerivations;
           };
 
-          runtimeDeps = with pkgs; [
+          runtimeDeps = with final; [
             curl
             gnutar
             nodejs
