@@ -2497,12 +2497,12 @@
   proto = buildGrammar {
     passthru.name = "proto";
     language = "proto";
-    version = "0.0.0+rev=5a256fe3b6be3bd2ea4d03e1213d847c7093c2e1";
+    version = "0.0.0+rev=176563b253d83c4d64ae900fe0d34dfbeb735772";
     src = fetchFromGitHub {
       owner = "coder3101";
       repo = "tree-sitter-proto";
-      rev = "5a256fe3b6be3bd2ea4d03e1213d847c7093c2e1";
-      hash = "sha256-d1FU6NQs+9MPpeUBerXDghly4B9JfOTjK7Wc+ugypC0=";
+      rev = "176563b253d83c4d64ae900fe0d34dfbeb735772";
+      hash = "sha256-18jVtg83xdNZIAOQm8w7WOGo2uMtM+sYgLd64Fwr7Kg=";
     };
     meta.homepage = "https://github.com/coder3101/tree-sitter-proto";
   };
