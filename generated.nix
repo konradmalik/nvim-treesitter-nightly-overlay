@@ -1760,12 +1760,12 @@
   kdl = buildGrammar {
     passthru.name = "kdl";
     language = "kdl";
-    version = "0.0.0+rev=b37e3d58e5c5cf8d739b315d6114e02d42e66664";
+    version = "0.0.0+rev=v2.0.0";
     src = fetchFromGitHub {
       owner = "tree-sitter-grammars";
       repo = "tree-sitter-kdl";
-      rev = "b37e3d58e5c5cf8d739b315d6114e02d42e66664";
-      hash = "sha256-irx8aMEdZG2WcQVE2c7ahwLjqEoUAOOjvhDDk69a6lE=";
+      tag = "v2.0.0";
+      hash = "sha256-Ot1abHQPNFaXeWzOGNPNe4WTvdFGP8pNuc+tfGlpXEU=";
     };
     meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-kdl";
   };
