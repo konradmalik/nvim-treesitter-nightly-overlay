@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v7
-      - uses: DeterminateSystems/nix-installer-action@v22
+      - uses: DeterminateSystems/nix-installer-action@v23
       - run: nix flake update
       - run: nix develop --command "generate-parsers"
       - uses: peter-evans/create-pull-request@v8
