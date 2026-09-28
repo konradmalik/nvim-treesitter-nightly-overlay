@@ -2932,12 +2932,12 @@
   scheme = buildGrammar {
     passthru.name = "scheme";
     language = "scheme";
-    version = "0.0.0+rev=05a0dd7160f09382f9c14fd122c20f26159ddf97";
+    version = "0.0.0+rev=1b112d9571e4f62fb3d095d52a51f1da7756fb94";
     src = fetchFromGitHub {
       owner = "6cdh";
       repo = "tree-sitter-scheme";
-      rev = "05a0dd7160f09382f9c14fd122c20f26159ddf97";
-      hash = "sha256-JtfqwOEhCcV0wHeZmA/vSvwrJ32KPioZKThw2ohIB6A=";
+      rev = "1b112d9571e4f62fb3d095d52a51f1da7756fb94";
+      hash = "sha256-7bMxrSeJpIIYkD8brP6oIW2F9ePYRsx1l2ZRfx6yGwM=";
     };
     meta.homepage = "https://github.com/6cdh/tree-sitter-scheme";
   };
