@@ -843,12 +843,12 @@
   fidl = buildGrammar {
     passthru.name = "fidl";
     language = "fidl";
-    version = "0.0.0+rev=3faeeae0dbe66b54be0086daa0e0af4da44e7d68";
+    version = "0.0.0+rev=bd81f6429a1539b05f52a4344bc9f6ac11d73d1f";
     src = fetchFromGitHub {
       owner = "google";
       repo = "tree-sitter-fidl";
-      rev = "3faeeae0dbe66b54be0086daa0e0af4da44e7d68";
-      hash = "sha256-G2a0NGfMnY4e8WbH7QIiX4kaZ7G2Plzt2KO0HXf6vcQ=";
+      rev = "bd81f6429a1539b05f52a4344bc9f6ac11d73d1f";
+      hash = "sha256-z2j/GKgrR33jKxGQmFj5NjTUcXngtC6Ar2oubdoIKec=";
     };
     meta.homepage = "https://github.com/google/tree-sitter-fidl";
   };
@@ -1268,12 +1268,12 @@
   groovy = buildGrammar {
     passthru.name = "groovy";
     language = "groovy";
-    version = "0.0.0+rev=deb0dcf8c4544f07564060f6e9b9f6e4b0bfc27d";
+    version = "0.0.0+rev=2a6ddd558b6aa39c5b77d8db9fe9baf817486b2c";
     src = fetchFromGitHub {
       owner = "murtaza64";
       repo = "tree-sitter-groovy";
-      rev = "deb0dcf8c4544f07564060f6e9b9f6e4b0bfc27d";
-      hash = "sha256-x7PawYYtgsduh60KNnS4LgB7SvoBV9aOJ9cHNsLBBhc=";
+      rev = "2a6ddd558b6aa39c5b77d8db9fe9baf817486b2c";
+      hash = "sha256-VCGG8La067V2m/16wxwldj3rKrAl822j58u7j9Qa1d0=";
     };
     meta.homepage = "https://github.com/murtaza64/tree-sitter-groovy";
   };
@@ -1712,12 +1712,12 @@
   julia = buildGrammar {
     passthru.name = "julia";
     language = "julia";
-    version = "0.0.0+rev=e04970eea7b8cc1a526191b37ab2113c3ebc374f";
+    version = "0.0.0+rev=9b92fddcedb55003b32601238653b121bc46f544";
     src = fetchFromGitHub {
       owner = "tree-sitter-grammars";
       repo = "tree-sitter-julia";
-      rev = "e04970eea7b8cc1a526191b37ab2113c3ebc374f";
-      hash = "sha256-GuCzs6d4Uhu0+rgJDrbKCfVjUUwbxRegFAVUYJoaa2w=";
+      rev = "9b92fddcedb55003b32601238653b121bc46f544";
+      hash = "sha256-VvZHh2JpQ7s9djH13IZFvLYzlsb0+fT8PNnmXGue0iA=";
     };
     meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-julia";
   };
@@ -2163,12 +2163,12 @@
   nix = buildGrammar {
     passthru.name = "nix";
     language = "nix";
-    version = "0.0.0+rev=a2cd7f4011c6e5830c0c9af5aa35441b3ddd5fba";
+    version = "0.0.0+rev=929f53586dcc0611d2c9406886d9d18033ed71bc";
     src = fetchFromGitHub {
       owner = "nix-community";
       repo = "tree-sitter-nix";
-      rev = "a2cd7f4011c6e5830c0c9af5aa35441b3ddd5fba";
-      hash = "sha256-IOanyzxBlLzlCOmLQa7hn+n1Yyc30upbmeuth7M4VcA=";
+      rev = "929f53586dcc0611d2c9406886d9d18033ed71bc";
+      hash = "sha256-fAdq5luxS6klTenlFOztDSnCgtE9JfA+VJpYcDAJz/Q=";
     };
     meta.homepage = "https://github.com/nix-community/tree-sitter-nix";
   };
@@ -3262,12 +3262,12 @@
   swift = buildGrammar {
     passthru.name = "swift";
     language = "swift";
-    version = "0.0.0+rev=187fd4d3e55e2088da9cb31e414a2bac866292e8";
+    version = "0.0.0+rev=35245fbfee2fccf16273c6f4299438fb76875970";
     src = fetchFromGitHub {
       owner = "alex-pinkus";
       repo = "tree-sitter-swift";
-      rev = "187fd4d3e55e2088da9cb31e414a2bac866292e8";
-      hash = "sha256-Qzl3rs1dOokT4gU14uaXCBG7RFgieoFWu24pEh8gPfU=";
+      rev = "35245fbfee2fccf16273c6f4299438fb76875970";
+      hash = "sha256-uHlltkIrkbWHLNasn346h9v4MXzvhF8O+uNQNt3pkvA=";
     };
     meta.homepage = "https://github.com/alex-pinkus/tree-sitter-swift";
     generate = true;
@@ -3299,12 +3299,12 @@
   systemverilog = buildGrammar {
     passthru.name = "systemverilog";
     language = "systemverilog";
-    version = "0.0.0+rev=3390da8c76a976b6f47d19667accc43e81a1483b";
+    version = "0.0.0+rev=d6be6119fe4d04c65c567e7b79625aa6280fea34";
     src = fetchFromGitHub {
       owner = "gmlarumbe";
       repo = "tree-sitter-systemverilog";
-      rev = "3390da8c76a976b6f47d19667accc43e81a1483b";
-      hash = "sha256-ukebcwVJvMsGi91NDF1VZMJZufSzTZqsDapZzf33V20=";
+      rev = "d6be6119fe4d04c65c567e7b79625aa6280fea34";
+      hash = "sha256-3g5hAh5r5YJ96bdtLS74OeIiSbDhiLRYGzRa3iUhPHg=";
     };
     meta.homepage = "https://github.com/gmlarumbe/tree-sitter-systemverilog";
   };
