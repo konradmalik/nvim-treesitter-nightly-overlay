@@ -82,3 +82,12 @@ nix develop --command "generate-parsers"
 ```
 
 This runs a lua script similar to the old [update.py](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vim/plugins/utils/nvim-treesitter/update.py), but uses the `nvim-treesitter` as a source for version info instead of the NURR json file.
+
+## Development
+
+```bash
+$ nix fmt
+$ nix flake check
+```
+
+`nix fmt` formats everything through treefmt (`treefmt.nix`), and `nix flake check` checks that formatting.

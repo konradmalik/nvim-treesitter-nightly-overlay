@@ -7,6 +7,10 @@
       url = "github:nvim-treesitter/nvim-treesitter";
       flake = false;
     };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -16,26 +20,34 @@
 
       forAllSystems =
         function:
-        inputs.nixpkgs.lib.genAttrs
-          [
-            "x86_64-linux"
-            "aarch64-linux"
-            "aarch64-darwin"
-          ]
-          (system: function inputs.nixpkgs.legacyPackages.${system});
+        inputs.nixpkgs.lib.genAttrs [
+          "x86_64-linux"
+          "aarch64-linux"
+          "aarch64-darwin"
+        ] (system: function inputs.nixpkgs.legacyPackages.${system});
+
+      treefmtFor = pkgs: inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
     in
     {
       overlays = {
         default = overlay;
       };
 
-      devShells = forAllSystems (pkgs: {
-        default = pkgs.mkShell {
-          packages = [
-            (import ./generate-parsers { inherit inputs pkgs; })
-          ];
-        };
-      });
+      devShells = forAllSystems (
+        pkgs:
+        let
+          treefmt = (treefmtFor pkgs).config.build;
+        in
+        {
+          default = pkgs.mkShellNoCC {
+            packages = [
+              treefmt.wrapper
+              (import ./generate-parsers { inherit inputs pkgs; })
+            ]
+            ++ builtins.attrValues treefmt.programs;
+          };
+        }
+      );
 
       packages = forAllSystems (
         pkgs:
@@ -48,6 +60,10 @@
         }
       );
 
-      formatter = forAllSystems (pkgs: pkgs.nixfmt);
+      checks = forAllSystems (pkgs: {
+        formatting = (treefmtFor pkgs).config.build.check inputs.self;
+      });
+
+      formatter = forAllSystems (pkgs: (treefmtFor pkgs).config.build.wrapper);
     };
 }
