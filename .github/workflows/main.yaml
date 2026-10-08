@@ -18,7 +18,6 @@ jobs:
             accept-flake-config = true
       - uses: DeterminateSystems/magic-nix-cache-action@v15
       - run: nix flake check
-      - run: nix run nixpkgs#nixfmt **/*.nix
 
       # check generate-parsers
       - run: mv generated.nix generated.nix.old
