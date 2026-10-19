@@ -120,12 +120,6 @@ in
             grammarPlugins = lib.mapAttrs (_: grammarToPlugin) generatedDerivations;
           };
 
-          runtimeDeps = with final; [
-            curl
-            gnutar
-            nodejs
-          ];
-
           nvimSkipModules = [ "nvim-treesitter._meta.parsers" ];
         })
       );
