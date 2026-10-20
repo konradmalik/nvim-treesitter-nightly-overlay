@@ -3611,12 +3611,12 @@
   unison = buildGrammar {
     passthru.name = "unison";
     language = "unison";
-    version = "0.0.0+rev=10365cc70ab2b2de85ea7ab35cf6b7636c36ce8b";
+    version = "0.0.0+rev=f3360279ea9e788e52a725b7dec8509bc44cae45";
     src = fetchFromGitHub {
       owner = "kylegoetz";
       repo = "tree-sitter-unison";
-      rev = "10365cc70ab2b2de85ea7ab35cf6b7636c36ce8b";
-      hash = "sha256-l6X2x5lGlUhyf6Pr6lWd4aWacz7vmvtHVyM4qqPO8zg=";
+      rev = "f3360279ea9e788e52a725b7dec8509bc44cae45";
+      hash = "sha256-PHhAis28cv3KzxHk/VaiLOnxAGIwIs6rd6UTpPE9yMo=";
     };
     meta.homepage = "https://github.com/kylegoetz/tree-sitter-unison";
     generate = true;
