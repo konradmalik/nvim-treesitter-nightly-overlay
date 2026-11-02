@@ -1613,12 +1613,12 @@
   jinja = buildGrammar {
     passthru.name = "jinja";
     language = "jinja";
-    version = "0.0.0+rev=c213d3745ccdcaaa858869181c7b1bf9557a025f";
+    version = "0.0.0+rev=v0.13.1";
     src = fetchFromGitHub {
       owner = "cathaysia";
       repo = "tree-sitter-jinja";
-      rev = "c213d3745ccdcaaa858869181c7b1bf9557a025f";
-      hash = "sha256-DgHJ3pwLG6yLxzIaNSB+wpmt8Wl0CLdYcfOx+MDr39A=";
+      tag = "v0.13.1";
+      hash = "sha256-CnK5gFUWX9x6lXFpLURUP0hFY2iW/lEGewCpjNGqUUk=";
     };
     meta.homepage = "https://github.com/cathaysia/tree-sitter-jinja";
     location = "tree-sitter-jinja";
@@ -1627,12 +1627,12 @@
   jinja_inline = buildGrammar {
     passthru.name = "jinja_inline";
     language = "jinja_inline";
-    version = "0.0.0+rev=c213d3745ccdcaaa858869181c7b1bf9557a025f";
+    version = "0.0.0+rev=v0.13.1";
     src = fetchFromGitHub {
       owner = "cathaysia";
       repo = "tree-sitter-jinja";
-      rev = "c213d3745ccdcaaa858869181c7b1bf9557a025f";
-      hash = "sha256-DgHJ3pwLG6yLxzIaNSB+wpmt8Wl0CLdYcfOx+MDr39A=";
+      tag = "v0.13.1";
+      hash = "sha256-CnK5gFUWX9x6lXFpLURUP0hFY2iW/lEGewCpjNGqUUk=";
     };
     meta.homepage = "https://github.com/cathaysia/tree-sitter-jinja";
     location = "tree-sitter-jinja_inline";
