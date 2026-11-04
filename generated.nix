@@ -502,18 +502,6 @@
     };
     meta.homepage = "https://github.com/eonpatapon/tree-sitter-cue";
   };
-  cylc = buildGrammar {
-    passthru.name = "cylc";
-    language = "cylc";
-    version = "0.0.0+rev=6d1d81137112299324b526477ce1db989ab58fb8";
-    src = fetchFromGitHub {
-      owner = "elliotfontaine";
-      repo = "tree-sitter-cylc";
-      rev = "6d1d81137112299324b526477ce1db989ab58fb8";
-      hash = "sha256-jgQCTM36S8UwSyT4LAfcX4DUIl2OYVMeQdDg3zRrw00=";
-    };
-    meta.homepage = "https://github.com/elliotfontaine/tree-sitter-cylc";
-  };
   d = buildGrammar {
     passthru.name = "d";
     language = "d";
