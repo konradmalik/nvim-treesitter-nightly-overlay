@@ -261,14 +261,14 @@
   c = buildGrammar {
     passthru.name = "c";
     language = "c";
-    version = "0.0.0+rev=b780e47fc780ddc8da13afa35a3f4ed5c157823d";
+    version = "0.0.0+rev=b1564d8e2513515be1cdbbff0a634b943316a5a1";
     src = fetchFromGitHub {
-      owner = "tree-sitter";
+      owner = "tree-sitter-grammars";
       repo = "tree-sitter-c";
-      rev = "b780e47fc780ddc8da13afa35a3f4ed5c157823d";
-      hash = "sha256-Juuf57GQI7OAP6O03KtSzyKJAoXtGKjyYJ+sTM1A4mU=";
+      rev = "b1564d8e2513515be1cdbbff0a634b943316a5a1";
+      hash = "sha256-hHm9WfI6LnSvVAwrykB3kxhgEp+ivSF/PDA5yFtfd+I=";
     };
-    meta.homepage = "https://github.com/tree-sitter/tree-sitter-c";
+    meta.homepage = "https://github.com/tree-sitter-grammars/tree-sitter-c";
   };
   c3 = buildGrammar {
     passthru.name = "c3";
