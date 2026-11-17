@@ -3287,12 +3287,12 @@
   systemverilog = buildGrammar {
     passthru.name = "systemverilog";
     language = "systemverilog";
-    version = "0.0.0+rev=73d7620ffdc467aab3c2089be9be5cbbc1be2eaa";
+    version = "0.0.0+rev=140d0a103c39423cf2e8647c6bb1ea096440ff8b";
     src = fetchFromGitHub {
       owner = "gmlarumbe";
       repo = "tree-sitter-systemverilog";
-      rev = "73d7620ffdc467aab3c2089be9be5cbbc1be2eaa";
-      hash = "sha256-28+dDWi0LqAKJPUktLg21lUANLGnEAtW8ClFTfOpDs0=";
+      rev = "140d0a103c39423cf2e8647c6bb1ea096440ff8b";
+      hash = "sha256-NktY81nq0rY36CCQzUUCF0h7ETgDJSFWqO/lnEVPczA=";
     };
     meta.homepage = "https://github.com/gmlarumbe/tree-sitter-systemverilog";
   };
