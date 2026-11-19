@@ -285,12 +285,12 @@
   c_sharp = buildGrammar {
     passthru.name = "c_sharp";
     language = "c_sharp";
-    version = "0.0.0+rev=v0.23.5";
+    version = "0.0.0+rev=v0.24.0";
     src = fetchFromGitHub {
       owner = "tree-sitter";
       repo = "tree-sitter-c-sharp";
-      tag = "v0.23.5";
-      hash = "sha256-N5AAlwQFGGi47cj0m7Te08bA486gwY6NBOx4Qcy4lpo=";
+      tag = "v0.24.0";
+      hash = "sha256-O1gIlpFNJOao/JsKgYkXxwkxLro0y5pPFIlEZhxfQyg=";
     };
     meta.homepage = "https://github.com/tree-sitter/tree-sitter-c-sharp";
   };
@@ -3918,12 +3918,12 @@
   zsh = buildGrammar {
     passthru.name = "zsh";
     language = "zsh";
-    version = "0.0.0+rev=7a593401efb5418ffdedbe3c0e4c61c6d240166d";
+    version = "0.0.0+rev=77eee01fa3226133e7ae49c2297de558ebb75df0";
     src = fetchFromGitHub {
       owner = "georgeharker";
       repo = "tree-sitter-zsh";
-      rev = "7a593401efb5418ffdedbe3c0e4c61c6d240166d";
-      hash = "sha256-KCvuyVWR09jlTk+za0FA/z89O5deToxvJ9zNQoBq/+E=";
+      rev = "77eee01fa3226133e7ae49c2297de558ebb75df0";
+      hash = "sha256-vWknWbm6AdMWEbL4+t479Pf0HAnX9tR1GGbYu8A/puo=";
     };
     meta.homepage = "https://github.com/georgeharker/tree-sitter-zsh";
   };
